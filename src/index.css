@@ -11,3 +11,102 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+* {
+ padding: 0px;
+ margin: 0px;
+}
+
+ul, li, button, input {
+  list-style-type: none;
+}
+.dashboard {
+  max-width: 45rem;
+  height: 25rem;
+  background-color: rgb(170, 170, 170);
+  margin-inline:auto auto;
+  margin-top: 10rem;
+
+  padding: 1.5rem;
+  border-radius: 15px;
+
+  display: grid;
+  grid-template-columns: 50% 5% 45%;
+  grid-template-areas: 
+    "price price balance"
+    "gas transactions transactions";
+  grid-template-rows: 50% 50%;
+}
+
+.container {
+  border-radius: .5rem;
+  padding: .8rem;
+
+  box-shadow: 0px 0px 5px -2px black;
+
+  margin: 10px;
+}
+
+.price-container {
+  display:flex;
+  flex-direction: column;
+  background-color: rgb(225, 225, 255);
+
+  grid-column-start: 1;
+  grid-column-end:  3;
+}
+
+.gas-container {
+  background-color: rgb(200, 200, 200);
+
+  grid-column-start: 1;
+  grid-column-end:   2;
+}
+
+.balance-container {
+  background-color: rgb(100, 100, 100);
+
+  grid-column-start: 3;
+  grid-column-end: 4;
+  grid-row-start: 1;
+  grid-row-end: 2;
+
+  display: block;
+}
+
+.trans-container {
+  background-color: rgb(80, 80, 80);
+
+  grid-column-start: 2;
+  grid-column-end: 4;
+}
+
+.container-title {
+  font-size:2em; 
+  font-weight: 600;
+
+  text-wrap: nowrap;
+}
+
+.exchange-container {
+  display: flex;
+  gap: 5px;
+  height: 30px;
+  align-items: center;
+
+  margin-top: 4rem;
+}
+
+.exchange-button {
+  border-radius: 5px;
+  font-size: .8em;
+  background-color: black;
+  color: white;
+  padding: 5px;
+
+  margin: 0px;
+}
+
+.midfontsize {
+  font-size: 1.5em;
+}
