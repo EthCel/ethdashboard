@@ -48,8 +48,7 @@ ul, li, button, input {
 }
 
 .price-container {
-  display:flex;
-  flex-direction: column;
+  display:block;
   background-color: rgb(225, 225, 255);
 
   grid-column-start: 1;
@@ -61,6 +60,60 @@ ul, li, button, input {
 
   grid-column-start: 1;
   grid-column-end:   2;
+
+}
+
+.gas-meter {
+  height: .40rem;
+  width: 100%;
+  border-radius: 100px;
+
+  background: rgb(2,0,36);
+  background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(130,232,7,1) 0%, rgba(232,5,19,0.9234287464985994) 98%);
+
+  margin-top: 2rem;
+}
+
+.gas-labels {
+  display:flex;
+
+  justify-content: space-between;
+  margin-top: 2rem;
+}
+
+.gas-prices {
+  display:flex;
+  justify-content: space-between;
+
+  position: relative;
+}
+
+.safe::before {
+  content: '';
+  display: inline-block;
+  width: 3px;
+  height: 15px;
+  background: black;
+
+  transform: translate(28px, -120%);
+}
+
+.propose::before {
+  content: '';
+  display: inline-block;
+  width: 3px;
+  height: 15px;
+  background: black;
+  transform: translate(28px, -120%);
+}
+
+.fast::before {
+  content: '';
+  display: inline-block;
+  width: 3px;
+  height: 15px;
+  background: black;
+  transform: translate(28px, -120%);
 }
 
 .balance-container {
@@ -79,6 +132,13 @@ ul, li, button, input {
 
   grid-column-start: 2;
   grid-column-end: 4;
+
+}
+
+
+.transaction-info-container {
+  display:flex;
+  justify-content: space-between;
 }
 
 .container-title {
@@ -109,4 +169,15 @@ ul, li, button, input {
 
 .midfontsize {
   font-size: 1.5em;
+}
+
+.transaction-data {
+  display:grid;
+  grid-template-columns: .8fr 1fr 1rem;
+}
+
+.toAddress {
+}
+
+.txValue {
 }
